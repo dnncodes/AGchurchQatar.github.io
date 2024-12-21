@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<meta name="author" content="Untree.co">
+	<link rel="shortcut icon" href="favicon.png">
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap5" />
+	
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter&display=swap" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="fonts/icomoon/style.css">
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+	<link rel="stylesheet" href="css/tiny-slider.css">
+	<link rel="stylesheet" href="css/glightbox.min.css">
+	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Basic modal style */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            width: 80%;
+            max-width: 900px;
+            max-height: 80vh;
+            overflow-y: auto;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Profile image */
+        .profile-container {
+            flex: 0 0 120px;
+            margin-right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-container img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        /* Form layout */
+        .form-container {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-container input,
+        .form-container select,
+        .form-container textarea {
+            width: 45%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-container textarea {
+            width: 100%;
+            height: 100px;
+        }
+
+        .form-container .half {
+            width: 48%;
+        }
+
+        .scroll-to-top,
+        .scroll-to-bottom {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .scroll-to-bottom {
+            bottom: 80px;
+        }
+
+        /* Scrollbar customization */
+        .modal-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .modal-content::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 4px;
+        }
+
+        .modal-content::-webkit-scrollbar-thumb:hover {
+            background-color: #555;
+        }
+
+        /* Show the modal when active */
+        .modal.active {
+            display: flex;
+        }
+    </style>
+
+
+	<title>Shalom assemblies of God qatar &mdash; Doha Qatar </title>
+</head>
+<body >
+
+	<div class="site-mobile-menu site-navbar-target">
+		<div class="site-mobile-menu-header">
+			<div class="site-mobile-menu-close">
+				<span class="icofont-close js-menu-toggle"></span>
+			</div>
+		</div>
+		<div class="site-mobile-menu-body"></div>
+	</div>
+
+	<nav class="site-nav">
+		<div class="container">
+			<div class="site-navigation">
+				<a href="index.html" class="logo m-0 float-left">Shalom assemblies of God qatar</a>
+
+				<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
+					<li class="active"><a href="index.html">Home</a></li>
+					<!-- <li class="has-children">
+						<a href="sermons.html">Sermons</a>
+						<ul class="dropdown">
+							<li><a href="sermons.html">Sermons</a></li>
+							<li><a href="sermons-single.html">Sermons Single</a></li>
+							<li class="has-children">
+								<a href="#">Dropdown</a>
+								<ul class="dropdown">
+									<li><a href="#">Sub Menu One</a></li>
+									<li><a href="#">Sub Menu Two</a></li>
+									<li><a href="#">Sub Menu Three</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li> -->
+					
+                    <li><a href="sermons.html">sermon</a></li>
+                    <li><a href="ministry.html">Ministries</a></li>
+                    <li><a href="testimony.html">Testimonies</a></li>
+					<li><a href="events.html">Events & Announcements</a></li>
+					<li><a href="contact.html">Get In Touch</a></li>
+					<li class="cta-button"><a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#prayerRequestModal">Request a prayer</a></li>
+				</ul>
+
+				<a href="#" class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
+					<span></span>
+				</a>
+
+				
+			</div>
+		</div>
+	</nav>
+	<!-- style="background-image: url('images/hero_1.jpg'); " -->
+	<div class="hero overlay" style="background-image: url('images/landscape-1.jpg'); ">
+		<div class="container">
+			<div class="row align-items-center justify-content-between">
+				<div class="col-lg-5 me-auto text-start pe-lg-5">
+					<div class="intro-text">
+						<div class="mb-4"> 
+							<h1 data-aos="fade-left" class="hero-heading"> Testimonies </h1>
+						</div>
+						<div class="">
+							<p class="mb-5 opacity-5" data-aos="fade-left" data-aos-delay="200">Discover inspiring stories of transformation, healing, and answered prayers. Let these testimonies uplift your faith and remind you of God’s unwavering grace. Share your story to encourage others today!</p>
+							
+                            <!-- Trigger Button for the Modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#profileModal">
+                            Share Your Testimonies HERE
+                            </button>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-7" data-aos="fade-left">
+					<a href="https://www.facebook.com/100004877078533/videos/1496343117612527/" class="video-bg glightbox">
+						<span class="icon"><span class="icon-play"></span></span>
+						<img src="images/shalom5.jpg" alt="Image" class="img-fluid rounded">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<div class="section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-7 mx-auto text-center mb-5" data-aos="fade-up">
+                <span class="subheading mb-4 d-block">Testimonials</span>
+                <h2 class="mb-4 heading">Living Testimonies</h2>
+            </div>
+
+            <div id="testimonial-nav" class="controls testimonial-nav">
+                <span class="prev" data-controls="prev" tabindex="-1">Prev</span>
+                <span class="next" data-controls="next" tabindex="-1">Next</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="testimonial-slide-center-wrap" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-slide-center testimonial-center" id="testimonial-center">
+
+            <div class="item">
+                <div class="testimonial-item">
+                    <div  class="testimonial-item-inner">
+                        <h3 class="testimonial-heading">Far far away, behind the word mountains</h3>
+                        <blockquote>
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="images/person_1.jpg" alt="Image" class="img-fluid">
+                            <strong class="d-block">James Smith</strong>
+                            <span>Church Visitor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="testimonial-item">
+                    <div  class="testimonial-item-inner">
+                        <h3 class="testimonial-heading">Far far away, behind the word mountains</h3>
+                        <blockquote>
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="images/person_1.jpg" alt="Image" class="img-fluid">
+                            <strong class="d-block">James Smith</strong>
+                            <span>Church Visitor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="testimonial-item">
+                    <div  class="testimonial-item-inner">
+                        <h3 class="testimonial-heading">Far far away, behind the word mountains</h3>
+                        <blockquote>
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="images/person_1.jpg" alt="Image" class="img-fluid">
+                            <strong class="d-block">James Smith</strong>
+                            <span>Church Visitor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="testimonial-item">
+                    <div  class="testimonial-item-inner">
+                        <h3 class="testimonial-heading">Far far away, behind the word mountains</h3>
+                        <blockquote>
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="images/person_1.jpg" alt="Image" class="img-fluid">
+                            <strong class="d-block">James Smith</strong>
+                            <span>Church Visitor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div class="testimonial-item">
+                    <div  class="testimonial-item-inner">
+                        <h3 class="testimonial-heading">Far far away, behind the word mountains</h3>
+                        <blockquote>
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="images/person_1.jpg" alt="Image" class="img-fluid">
+                            <strong class="d-block">James Smith</strong>
+                            <span>Church Visitor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="testimonial-item">
+                    <div  class="testimonial-item-inner">
+                        <h3 class="testimonial-heading">Far far away, behind the word mountains</h3>
+                        <blockquote>
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="images/person_1.jpg" alt="Image" class="img-fluid">
+                            <strong class="d-block">James Smith</strong>
+                            <span>Church Visitor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="testimonial-item">
+                    <div  class="testimonial-item-inner">
+                        <h3 class="testimonial-heading">Far far away, behind the word mountains</h3>
+                        <blockquote>
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="images/person_1.jpg" alt="Image" class="img-fluid">
+                            <strong class="d-block">James Smith</strong>
+                            <span>Church Visitor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="testimonial-item">
+                    <div  class="testimonial-item-inner">
+                        <h3 class="testimonial-heading">Far far away, behind the word mountains</h3>
+                        <blockquote>
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="images/person_1.jpg" alt="Image" class="img-fluid">
+                            <strong class="d-block">James Smith</strong>
+                            <span>Church Visitor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="testimonial-item">
+                    <div  class="testimonial-item-inner">
+                        <h3 class="testimonial-heading">Far far away, behind the word mountains</h3>
+                        <blockquote>
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="images/person_1.jpg" alt="Image" class="img-fluid">
+                            <strong class="d-block">James Smith</strong>
+                            <span>Church Visitor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        
+    </div>
+
+</div>
+
+
+<div class="section bg-white mx-2 mx-md-5 sec-services-wrap">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
+                <span class="subheading mb-4 d-block">Our Services</span>
+                <h2 class="mb-4 heading">Church Services</h2>
+
+            </div>
+        </div>
+
+        <div class="row g-5">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="service text-center">
+                    <span class="icon-home mb-4 d-block"></span>
+                    <h3 class="heading">Worship</h3>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+                    
+                </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="service text-center">
+                    <span class="icon-leaf mb-4 d-block"></span>
+                    <h3 class="heading">Baptism</h3>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+                    
+                </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="service text-center">
+                    <span class="icon-book mb-4 d-block"></span>
+                    <h3 class="heading">Exhortation</h3>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="section sec-cta bg-secondary">
+    <div class="container">
+        <div class="row align-items-center" data-aos="fade-up">
+            <div class="col-lg-9 text-center text-md-start mb-4 mb-md-0">
+                <h2 class="heading text-white">Get better by hearing our sermons</h2>
+            </div>		
+            <div class="col-lg-3 text-center text-md-end" data-aos="fade-up" data-aos-delay="100">
+                <a href="#" class="btn btn-primary py-3 px-5">Join Us</a>
+            </div>
+
+        </div>		
+    </div>		
+</div>
+
+<!------testimony modal begin-------->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center" id="profileModalLabel">Thank for sharing your testimony</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row">
+              <!-- Profile Picture Section -->
+              <div class="col-md-4 d-flex justify-content-center align-items-center">
+                <div class="profile-picture">
+                  <img src="" alt="Profile Picture" id="profilePicturePreview" class="img-fluid rounded-circle" style="width: 120px; height: 120px;">
+                  <input type="file" id="profilePicture" accept="image/*" class="form-control mt-2" onchange="previewProfilePicture()">
+                </div>
+              </div>
+              <!-- Personal Information Section -->
+              <div class="col-md-8">
+                <div class="mb-3 row">
+                  <label for="firstName" class="col-sm-3 col-form-label">Names</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="firstName">
+                  </div>
+                </div>
+                                
+                <div class="mb-3 row">
+                  <label for="phone" class="col-sm-3 col-form-label">Calling No.</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="phone">
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label for="whatsapp" class="col-sm-3 col-form-label">WhatsApp No.</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="whatsapp">
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </form>
+          <div class="mb-7 row">
+            <label for="bio" class="col-sm-12 col-form-label text-center">Write Your testimony Below</label>
+            <div class="col-sm-12">
+              <textarea class="form-control" id="bio" rows="7"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- JavaScript to handle profile picture preview -->
+  <script>
+    function previewProfilePicture() {
+      const file = document.getElementById('profilePicture').files[0];
+      const reader = new FileReader();
+      
+      reader.onloadend = function() {
+        document.getElementById('profilePicturePreview').src = reader.result;
+      };
+      
+      if (file) {
+        reader.readAsDataURL(file);
+      }
+    }
+  </script>
+  
+
+<!--------testimony modal end-->
+
+<div class="site-footer bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="widget">
+                    <h3>Contact</h3>
+                    <address>Religious Complex, Doha Qatar</address>
+                    <ul class="list-unstyled links">
+                        <li><a href="tel://+97455001595">(+974) 55001595</a></li>
+                        <li><a href="tel://+97439971420">(+974) 39971420</a></li>
+                        <li><a href="mailto:agchurchqatar.com">info@agchurchqatar.com</a></li>
+                    </ul>
+                </div> <!-- /.widget -->
+            </div> <!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <div class="widget">
+                    <h3>Sources</h3>
+                    <ul class="list-unstyled float-start links">
+                        <!-- <li><a href="home.html">About us</a></li> -->
+                        <li><a href="sermons.html">Sermons</a></li>
+                        <li><a href="testimony.html">Testimonies</a></li>
+                        <li><a href="ministry.html">Ministries</a></li>
+                        <li><a href="events.html">Events & Announcements</a></li>
+                        <li><a href="contact.html">Get in Touch With Us</a></li>
+                    </ul>
+                    <ul class="list-unstyled float-start links">
+                        <li><a href="https://chat.whatsapp.com/EWO9De2WWvYHC0N2kZs3Ld">CLICK to Join Our WhatsApp groups</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <!-- <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Creative</a></li> -->
+                    </ul>
+                </div> <!-- /.widget -->
+            </div> <!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <div class="widget">
+                    <h3>Links</h3>
+                    <ul class="list-unstyled links">
+                        <li><a href="home.html">Our Vision</a></li>
+                        <li><a href="home.html">About us</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+
+                    <ul class="list-unstyled social">
+                        <li><a href="#"><span class="icon-youtube"></span></a></li>
+                        <li><a href="https://www.instagram.com/explore/locations/325071807/shalom-assembly-of-god/"><span class="icon-instagram"></span></a></li>
+                        <li><a href="https://www.facebook.com/groups/2515246572123606/"><span class="icon-facebook"></span></a></li>
+                        <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                        <!-- <li><a href="#"><span class="icon-pinterest"></span></a></li>
+                        <li><a href="#"><span class="icon-dribbble"></span></a></li> -->
+                    </ul>
+                </div> <!-- /.widget -->
+            </div> <!-- /.col-lg-4 -->
+        </div> <!-- /.row -->
+
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <p class="mb-0">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://www.dnncreatives.com">Dnn Creatives</a>
+                </p>
+            </div>
+        </div>
+    </div> <!-- /.container -->
+</div> <!-- /.site-footer -->
+
+
+<!-- Preloader -->
+<div id="overlayer"></div>
+<div class="loader">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+
+
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/tiny-slider.js"></script>
+<script src="js/glightbox.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/counter.js"></script>
+<script src="js/custom.js"></script>
+
+
+</body>
+</html>
